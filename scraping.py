@@ -26,7 +26,9 @@ def scrape_all():
         "news_paragraph": news_paragraph,
         "featured_image": featured_image(browser),
         "facts": mars_facts(),
-        "last_modified": dt.datetime.now()
+        "last_modified": dt.datetime.now(),
+        "hemisphere_image": {"img_url": img_url,
+                            "title": title}
     }
 
     # Stop webdriver (end the automated browsing session) and return data
@@ -109,6 +111,13 @@ def mars_facts():
     # Convert DF back into HTML format, add bootstrap
     # return df.to_html()
     return df.to_html(classes="table table-striped")
+
+# ## Hemisphere Data
+def hemisphere_img():
+    # Add try/except for error handling
+    try:
+    except AttributeError:
+        return None
 
 if __name__ == "__main__":
     # If running as script, print scraped data
