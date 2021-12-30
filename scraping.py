@@ -111,9 +111,9 @@ def mars_facts():
     df.columns=['description', 'Mars', 'Earth']
     df.set_index('description', inplace=True)
 
-    # Convert DF back into HTML format, add table-hover using bootstrap
+    # Convert DF back into HTML format, add table-striped using bootstrap
     # return df.to_html()
-    return df.to_html(classes="table table-hover")
+    return df.to_html(classes="table table-striped")
 
 # ## Hemisphere Data
 def hemisphere_img(browser):
