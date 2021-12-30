@@ -15,7 +15,8 @@
         <!-- Add Jumbotron to Header -->
         <div class="jumbotron text-center">
             <h1>Mission to Mars</h1>
-            <p><a class="btn btn-primary btn-lg" href="/scrape"
+            <!-- styling the button: set to large button and in 'Green' -->
+            <p><a class="btn btn-success btn-lg" href="/scrape"
                         role="button">Scrape New Data</a></p>
         </div>
         <!-- Add section for Mars News -->
@@ -31,7 +32,7 @@
         </div>
         <!-- Mars Featured Image -->
         <div class="row" id="mars-featured-image">
-            <div class="col-md-8">
+            <div class="col-xs-12 col-sm-6 col-md-8">
                 <h2>Featured Mars Image</h2>
                 <img 
                     src="{{mars.featured_image}}" 
@@ -40,10 +41,11 @@
                 />
             </div>
             <!-- Mars Facts -->
-            <div class="col-md-4">
+            <div class="col-xs-6 col-sm-6 col-md-4">
                 <div class="row" id="mars-facts">
-                    <h4>Mars Facts</h4>
-                    {{ mars.facts | safe }}
+                <h4>Mars Facts</h4>
+                <!-- add table-hover to the table using bootstrap in the function mars_facts() defined in "scraping.py"  -->
+                {{ mars.facts | safe }}
                 </div>
             </div>
         </div>
@@ -52,20 +54,19 @@
             <div class="col-md-12">
                 <h2 style="text-align:center">Mars Hemisphere</h2>
             </div>
-            <div class="row" id="mars-images">
-                <div class="col-md-3">
-                    <!-- Loop through the list of dictionaries to retrieve img_url and title -->
-                    {% for hemisphere in mars.hemispheres %}
-                    <!--div class="row" id="mars-henishpere"> -->
-                    <img
-                        src="{{hemisphere.img_url}}"
-                        class="img-responsive"
-                        alt="Responsive image"
-                    />
-                    <h4>{{hemisphere.title}}</h4>
-                    {% endfor %}
-                </div>
-            </div>
+        </div>
+        <div class="row" id="mars-images">
+            <div class="col-xs-6 col-md-3">
+                <!-- Loop through the list of dictionaries to retrieve img_url and title -->
+                {% for hemisphere in mars.hemispheres %}
+                <img
+                    src="{{hemisphere.img_url}}"
+                    class="img-responsive"
+                    alt="Responsive image"
+                />
+                <h4>{{hemisphere.title}}</h4>
+                {% endfor %}
+            </div>            
         </div>
     </div>
 </body>
