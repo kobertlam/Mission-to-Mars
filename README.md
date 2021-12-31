@@ -1,6 +1,12 @@
 # Mission-to-Mars
 Use BeautifulSoup and Splinter to scrape websites pertaining to the Mission to Mars, store the scraped data on a Mongo database, and build a web application to display the findings.
 
+Libraries and tools that need for web scraping (a technique to gather data from multiple websites, store it in a database, then present the collected data in a central location, a webpage):
+1. Splinter to automate a web browser
+2. BeautifulSoup to parse and extract the data
+3. MongoDB to hold the data that has been gathered
+4. Flask to built a webpage to present the results
+
 Deliverable included:
 1. `Mission_to_Mars_Challenge.ipynb` file with all the code used for scraping.
 2. `scraping.py` file for scraping websites in a structured format.
