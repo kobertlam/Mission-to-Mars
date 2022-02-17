@@ -18,3 +18,5 @@ The following Bootstrap 3 components are added:
 2. Add table-striped to the mars-fact table in the function mars_facts() defined in `scraping.py`.
 3. Adding the hemisphere images as thumbnails in `index.html`
 
+Final output:
+![image 1](output.jpg)
