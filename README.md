@@ -19,4 +19,5 @@ The following Bootstrap 3 components are added:
 3. Adding the hemisphere images as thumbnails in `index.html`
 
 Final output:
+
 ![image 1](output.jpg)
